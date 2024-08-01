@@ -319,5 +319,19 @@ def shortest_path(graph, start):
     
 shortest_path(my_graph, 'A')
 
+# Step 28
+
+# The list() type constructor enables you to build a list from an iterable.
+
+# Modify the assignment of your unvisited variable to use list(), and pass graph as the iterable.
+
+def shortest_path(graph, start):
+    unvisited = list(graph)
+    distances = {}
+    
+    print(f'Unvisited: {unvisited}\nDistances: {distances}')
+    
+shortest_path(my_graph, 'A')
+
 
 
