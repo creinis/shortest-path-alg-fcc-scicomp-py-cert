@@ -607,6 +607,17 @@ if paths[node] and paths[node][-1] == node:
     
 shortest_path(my_graph, 'A')
 
+# Step 50
+
+# Create a for loop to iterate over targets_to_print and print the following f-string: 
+# f'\n{start}-{node} distance: {distances[node]}\nPath: {" -> ".join(paths[node])}'.
+
+targets_to_print = [target] if target else graph
+for node in targets_to_print:
+    print(f'\n{start}-{node} distance: {distances[node]}\nPath: {" -> ".join(paths[node])}')
+
+shortest_path(my_graph, 'A')
+
 
 
 
