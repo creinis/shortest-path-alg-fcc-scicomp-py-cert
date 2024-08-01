@@ -429,4 +429,14 @@ def shortest_path(graph, start):
     
 #shortest_path(my_graph, 'A')
 
+# Step 35
+
+# Inside the while loop, the first thing to do is define the current node to visit. 
+# For that you can use the min() function. It returns the smallest item from the iterable passed as the argument.
+
+# Remove pass, then create a variable called current and assign it min(unvisited).
+
+    while unvisited:
+        current = min(unvisited)
+
 
