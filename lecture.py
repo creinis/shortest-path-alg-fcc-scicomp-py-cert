@@ -223,4 +223,17 @@ def shortest_path():
 def shortest_path(graph, start):
     unvisited = []
 
+# Step 21
+
+# Create a for loop to iterate over your graph, and append each node to the unvisited list.
+
+def shortest_path(graph, start):
+    unvisited = []
+    for node in graph:
+        unvisited.append(node)
+
+
+
+
+
 
