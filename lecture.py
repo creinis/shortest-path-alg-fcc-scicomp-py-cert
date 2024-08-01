@@ -333,5 +333,23 @@ def shortest_path(graph, start):
     
 shortest_path(my_graph, 'A')
 
+# Step 29
+
+# With a dictionary comprehension, you can create a dictionary starting from an existing dictionary:
+
+{key: val for key in dict}
+
+# You want to keep track of the paths between the starting node and each other node.
+
+# After the distances variable, create a paths variable and assign it a dictionary with all the keys from graph. 
+# Assign an empty list to each key and use a dictionary comprehension to build your dictionary.
+
+def shortest_path(graph, start):
+    unvisited = list(graph)
+    distances = {}
+    paths = {node: [] for node in graph}
+    print(f'Unvisited: {unvisited}\nDistances: {distances}')
+    
+shortest_path(my_graph, 'A')
 
 
