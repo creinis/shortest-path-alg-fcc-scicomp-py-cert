@@ -477,4 +477,13 @@ def shortest_path(graph, start):
             if distance + distances[current] < distances[node]:
                 pass
 
+# Step 39
+
+# Inside your new if block, delete pass and reassign the neighbor node distance to the sum of the neighbor node 
+# distance plus the distance of current.
+
+            if distance + distances[current] < distances[node]:
+                distances[node] = distance + distances[current]
+
+
 
