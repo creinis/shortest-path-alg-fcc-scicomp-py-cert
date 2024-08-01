@@ -557,6 +557,21 @@ def shortest_path(graph, start):
                 paths[node].append(node)
         unvisited.remove(current)                    
 
+# Step 45
+
+# If you try to uncomment your function call, it won't work. 
+# You have a couple of bugs to fix. The first one happens because in the nested if you are trying to access 
+# that might not exist in your paths dictionary. So, you need to be sure that paths[node] is not empty before 
+# accessing paths[node][-1].
+
+# Add an additional condition to your nested if statement to ensure that paths[node] is non-empty 
+# before accessing paths[node][-1].
+
+if paths[node] and paths[node][-1] == node:
+    paths[node] = paths[current][:]
+
+
+
 
 
 
