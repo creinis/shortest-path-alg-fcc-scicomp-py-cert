@@ -287,4 +287,21 @@ def shortest_path(graph, start):
             distances[node] = float('inf')
     print(f'Unvisited: {unvisited}\nDistances: {distances}')
 
+# Step 26
+
+# Now, call your function passing my_graph and 'A' as the arguments.
+
+def shortest_path(graph, start):
+    unvisited = []
+    distances = {}
+    for node in graph:
+        unvisited.append(node)
+        if node == start:
+            distances[node] = 0
+        else:
+            distances[node] = float('inf')
+    print(f'Unvisited: {unvisited}\nDistances: {distances}')
+shortest_path(my_graph, 'A')
+
+
 
