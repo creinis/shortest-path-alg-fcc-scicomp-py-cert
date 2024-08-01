@@ -633,6 +633,17 @@ for node in targets_to_print:
 
 shortest_path(my_graph, 'A')
 
+# Step 52
 
+# Finally, at the very end of your function, return distances and paths.
+
+targets_to_print = [target] if target else graph
+for node in targets_to_print:
+    if node == start:
+        continue
+    print(f'\n{start}-{node} distance: {distances[node]}\nPath: {" -> ".join(paths[node])}')
+    
+# return distances, paths
+shortest_path(my_graph, 'A')
 
 
