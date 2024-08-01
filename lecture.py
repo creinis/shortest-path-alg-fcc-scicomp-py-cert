@@ -515,5 +515,15 @@ def shortest_path(graph, start):
                 if paths[node][-1] == node:
                     paths[node] = paths[current]
 
+# Step 42
 
+# Next, create an else statement and use the extend() function to add the current node path to the neighbor 
+# node path.
+
+                if paths[node][-1] == node:
+                    paths[node] = paths[current]
+                else:
+                    paths[node].extend(paths[current])
+                    
+                    
 
