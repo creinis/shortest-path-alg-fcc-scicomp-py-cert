@@ -232,6 +232,25 @@ def shortest_path(graph, start):
     for node in graph:
         unvisited.append(node)
 
+# Step 22
+
+# While the algorithm explores the graph, it should keep track of the currently known shortest distance between 
+# the starting node and the other nodes.
+
+# Before your for loop, create a new variable named distances and assign it an empty dictionary.
+
+# Step 23
+
+# The distance from the starting node is zero, because the algorithm begins its assessment right from there.
+# After appending node to unvisited in your loop, create an if statement that triggers if the node is equal to the starting node. Then assign 0 to that node inside the distances dictionary.
+
+def shortest_path(graph, start):
+    unvisited = []
+    distances = {}
+    for node in graph:
+        unvisited.append(node)
+        if node == start:
+            distances[node] = 0
 
 
 
