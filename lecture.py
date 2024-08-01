@@ -205,5 +205,22 @@ my_graph = {
 def shortest_path():
     pass
 
+# Step 19
+
+# The algorithm will start at a specified node. 
+# Then it will explore the graph to find the shortest path between the starting node, or source, 
+# and all the other nodes.
+
+# For that your function needs two parameters: graph, and start. Add them to your function declaration.
+
+# Step 20
+
+# To keep track of the visited nodes, you need a list of all the nodes in the graph. 
+# Once a node is visited, it will be removed from that list.
+
+# Now, replace the pass keyword with a variable named unvisited and assign it an empty list.
+
+def shortest_path(graph, start):
+    unvisited = []
 
 
