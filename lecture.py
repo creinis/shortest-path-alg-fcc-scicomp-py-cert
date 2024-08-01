@@ -455,4 +455,15 @@ def shortest_path(graph, start):
     while unvisited:
         current = min(unvisited, key=distances.get)
 
+# Step 37
+
+# After the current variable assignment, create a for loop to iterate over the tuples in the graph[current] list. 
+# You will need two iterating variables for that.
+
+    while unvisited:
+        current = min(unvisited, key=distances.get)
+        for A, B in graph[current]:
+            pass
+
+
 
