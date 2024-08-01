@@ -465,5 +465,16 @@ def shortest_path(graph, start):
         for A, B in graph[current]:
             pass
 
+# Step 38
+
+# Create an if statement to check if the distance of the neighbor node (the second item in the processed tuple) 
+# plus the distance of current is less than the currently known distance of the neighbor node 
+# (the first item in the processed tuple).
+
+# Use the pass keyword to temporarily fill the body of the if.
+
+        for node, distance in graph[current]:
+            if distance + distances[current] < distances[node]:
+                pass
 
 
