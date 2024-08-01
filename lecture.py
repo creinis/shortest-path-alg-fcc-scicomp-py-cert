@@ -40,4 +40,23 @@ copper = {'species': 'guinea pig'}
 
 copper = {'species': 'guinea pig', 'age' : 2}
 
+# Step 4
+
+# You can access the data stored in a dictionary through its keys:
+
+my_dict = {
+    'name': 'Michael',
+    'occupation': 'Lumberjack'
+}
+
+my_dict['name'] # 'Michael'
+
+# After your dictionary, follow the example above to access the species key of copper and print the result.
+
+copper = {
+    'species': 'guinea pig',
+    'age': 2
+}
+print(copper['species'])
+
 
