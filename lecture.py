@@ -570,7 +570,42 @@ def shortest_path(graph, start):
 if paths[node] and paths[node][-1] == node:
     paths[node] = paths[current][:]
 
+# Step 47
 
+# The other bug is subtle. When a shorter distance is found for a neighbor node, paths[current] gets assigned 
+# to the neighbor node path, paths[node].
+
+# This means both variables point to the same list. Since lists are mutable, when you append the neighbor node 
+# to its path, both paths[node] and paths[current] are modified because they are the same list. 
+# This results in wrong paths, although the distances are correct.
+
+# Fix that bug by assigning a copy of paths[current] to the neighbor node path. 
+# Modify the existing assignment inside your if block.
+
+if paths[node] and paths[node][-1] == node:
+    paths[node] = paths[current][:]
+
+# Step 48
+
+# The algorithm is complete but you can improve the output. 
+# Also, you can provide the function with an additional argument to return only the path between two nodes.
+
+# Add target as the third parameter to your function declaration and give it the default value of an empty string.
+
+# Step 49
+
+# Python provides a concise way to write if/else conditionals by using the ternary syntax:
+
+    # val_1 if condition else val_2
+
+# The expression above evaluates to val_1 if condition is true, otherwise to val_2.
+
+# Delete your print call and create a variable called targets_to_print after your while loop. 
+# Use the ternary syntax to assign it [target] when target is truthy, and graph otherwise.
+
+    targets_to_print = [target] if target else graph
+    
+shortest_path(my_graph, 'A')
 
 
 
