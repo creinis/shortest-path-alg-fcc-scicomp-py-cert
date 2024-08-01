@@ -503,6 +503,17 @@ def shortest_path(graph, start):
                 if paths[node][-1] == node:
                     pass
 
+# Step 41
+
+# Now remove pass and assign paths[current] to paths[node].
+
+    while unvisited:
+        current = min(unvisited, key=distances.get)
+        for node, distance in graph[current]:
+            if distance + distances[current] < distances[node]:
+                distances[node] = distance + distances[current]
+                if paths[node][-1] == node:
+                    paths[node] = paths[current]
 
 
 
