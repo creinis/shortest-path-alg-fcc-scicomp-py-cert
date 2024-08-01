@@ -540,5 +540,23 @@ def shortest_path(graph, start):
                     paths[node].extend(paths[current])
                 paths[node].append(node)
                  
-                    
+# Step 44
+
+# Terminate the while loop by removing the current node from the unvisited list. 
+# Pay attention to the indentation.
+
+    while unvisited:
+        current = min(unvisited, key=distances.get)
+        for node, distance in graph[current]:
+            if distance + distances[current] < distances[node]:
+                distances[node] = distance + distances[current]
+                if paths[node][-1] == node:
+                    paths[node] = paths[current]
+                else:
+                    paths[node].extend(paths[current])
+                paths[node].append(node)
+        unvisited.remove(current)                    
+
+
+
 
