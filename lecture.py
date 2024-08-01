@@ -102,4 +102,108 @@ copper['food'] = 'hay'
 copper['species'] = 'Cavia porcellus'
 print(copper)
 
+# Step 9
+
+# You can remove a key-value pair from a dictionary by using the del keyword. The syntax is the following:
+
+my_dict = {
+    'name': 'Michael',
+    'occupation': 'Lumberjack'
+}
+
+del my_dict['occupation']
+
+# Just before your print() call, use the del keyword to delete the age key and its value from copper.
+
+del copper['age']
+
+# Step 10
+
+# Now that you got the basic aspects of dictionaries, you can proceed to build the shortest path algorithm.
+# Delete every line of code after the declaration of the copper dictionary.
+
+# Step 11
+
+# Graphs are data structures representing relations between pairs of elements. 
+# These elements, called nodes, can be real-life objects, entities, points in space or others. 
+# The connections between the nodes are called the edges.
+
+# For example, a graph can be used to represent two points in the space, A and B, connected by a path. 
+# A graph like this will be made of two nodes connected by an edge.
+
+# Rename the copper dictionary into my_graph. This will represent the graph to test your algorithm.
+
+# Step 12
+
+# Now, replace the existent keys with the strings A and B — one for each node. 
+# Then, replace each value with the string representing the node connected to the key.
+
+my_graph = {
+    'A': 'B',
+    'B': 'A'
+}
+
+# Step 13
+
+# Add another node connected to B to your graph and call it C.
+
+# Modify your existing dictionary to represent this arrangement. 
+# Use a list to represent the multiple connections of your B node.
+
+my_graph = {
+    'A': 'B',
+    'B': ['A', 'C'],
+    'C': 'B'
+}
+
+# Step 14
+
+# Add one last node, D, which is connected with A and C. 
+# Modify your dictionary to represent this structure. 
+# Again, use a list to represent multiple connections.
+
+my_graph = {
+    'A': ['D', 'B'],
+    'B': ['A', 'C'],
+    'C': ['D', 'B'],
+    'D': ['A', 'C']
+}
+
+# Step 15
+
+# A graph is called a weighted graph when its edges are associated with weights, representing a distance, 
+# time or other quantitative value.
+
+# In your case, these weights will be the distances between each node, or point in space. 
+# To represent a weighted graph you can modify your dictionary, using a list of tuples for each value.
+
+# The first element in the tuple will be the connected node, and the second element will be an integer number 
+# indicating the distance.
+
+# Modify my_graph["A"] into a list of tuples, considering the following distances:
+
+    # Edge 	Weight
+    # A-B 	3
+    # B-C 	4
+    # C-D 	7
+    # D-A 	1
+
+my_graph = {
+    'A': [('B', 3), ('D', 1)],
+    'B': [('A', 3), ('C', 4)],
+    'C': [('B', 4), ('D', 7)],
+    'D': [('A', 1), ('C', 7)]
+}
+
+# Step 18
+
+# Now you are going to start developing the algorithm to calculate the shortest path between each node 
+# in your new graph.
+
+# Declare an empty function called shortest_path and don't forget the pass keyword.
+
+def shortest_path():
+    pass
+
+
 
