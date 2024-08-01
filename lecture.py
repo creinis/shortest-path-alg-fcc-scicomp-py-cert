@@ -303,5 +303,21 @@ def shortest_path(graph, start):
     print(f'Unvisited: {unvisited}\nDistances: {distances}')
 shortest_path(my_graph, 'A')
 
+# Step 27
+
+# All the distances in distances are set to infinite, except for the starting node. 
+# The unvisited list contains all the nodes in your graph. 
+# But actually, you don't need that for loop to achieve this result.
+
+# Remove your for loop with its entire body.
+
+def shortest_path(graph, start):
+    unvisited = []
+    distances = {}
+    
+    print(f'Unvisited: {unvisited}\nDistances: {distances}')
+    
+shortest_path(my_graph, 'A')
+
 
 
