@@ -485,5 +485,24 @@ def shortest_path(graph, start):
             if distance + distances[current] < distances[node]:
                 distances[node] = distance + distances[current]
 
+# Step 40
+
+# Once the distance to a node is set inside the distances dictionary, 
+# you need to keep track of the path to that node, too. 
+# If the distance for the node in the processed tuple has been updated, the last item in its path 
+# is the node itself.
+
+# Inside your conditional, nest another if statement that triggers when the last element of 
+# paths[node] is equal to node.
+
+    while unvisited:
+        current = min(unvisited, key=distances.get)
+        for node, distance in graph[current]:
+            if distance + distances[current] < distances[node]:
+                distances[node] = distance + distances[current]
+                if paths[node][-1] == node:
+                    pass
+
+
 
 
