@@ -618,6 +618,21 @@ for node in targets_to_print:
 
 shortest_path(my_graph, 'A')
 
+# Step 51
+
+# Now it's better but you don't want to print the details about the starting node.
+
+# Before the print call, add an if statement to execute when node is equal to start and use the continue 
+# keyword to go to the next loop iteration.
+
+targets_to_print = [target] if target else graph
+for node in targets_to_print:
+    if node == start:
+        continue
+    print(f'\n{start}-{node} distance: {distances[node]}\nPath: {" -> ".join(paths[node])}')
+
+shortest_path(my_graph, 'A')
+
 
 
 
