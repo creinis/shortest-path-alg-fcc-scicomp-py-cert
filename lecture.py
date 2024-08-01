@@ -386,4 +386,32 @@ def shortest_path(graph, start):
     
 shortest_path(my_graph, 'A')
 
+# Step 32
+
+# Add \nPaths: {paths} at the end of the f-string passed to the print call, 
+# so that it prints the paths variable, too.
+
+# Step 33
+
+# Your function is going to explore all the nodes connected to the starting node. 
+# It will calculate the shortest paths for all of them. 
+# Then, it will remove the starting node from the unvisited nodes.
+
+# Next, the closest neighbor node will be visited and the process will be repeated until all the nodes are visited.
+
+# From now on, you are going to work on the main loop that explores the nodes in the graph. 
+# To avoid issues with running an infinite loop during the algorithm development, 
+# turn your function call into a comment.
+
+def shortest_path(graph, start):
+    unvisited = list(graph)
+    distances = {node: 0 if node == start else float('inf') for node in graph}
+    paths = {node: [] for node in graph}
+    paths[start].append(start)
+    
+    print(f'Unvisited: {unvisited}\nDistances: {distances}\nPaths: {paths}')
+    
+#shortest_path(my_graph, 'A')
+
+
 
