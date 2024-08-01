@@ -59,4 +59,47 @@ copper = {
 }
 print(copper['species'])
 
+# Step 5
+
+# Now, modify your existing print() call to print the value of the age key.
+
+# Step 6
+
+#To add a new key-value pair after declaring a dictionary, 
+# you can indicate the key in the same way you would access an existing key, 
+# and set the value of the new key by using the assignment operator:
+
+my_dict = {
+    'name': 'Michael',
+    'occupation': 'Lumberjack'
+}
+
+my_dict['country'] = 'Canada'
+
+# Delete your print() call. Then, after declaring copper, add the key food to your dictionary 
+# and set its value to hay.
+
+copper = {
+    'species': 'guinea pig',
+    'age': 2
+}
+copper['food'] = 'hay'
+
+# Step 7
+
+#Now, at the bottom of your code, print copper.
+
+# Step 8
+
+# The same syntax can be used to change the value of an existing key.
+# Just before the print() call, access the species key and reassign its value to Cavia porcellus
+
+copper = {
+    'species': 'guinea pig',
+    'age': 2
+}
+copper['food'] = 'hay'
+copper['species'] = 'Cavia porcellus'
+print(copper)
+
 
